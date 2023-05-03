@@ -1,9 +1,15 @@
 fun main() {
 
-    val likes = 92
+    val likes = 8111
     val result = likes % 10
+    val result2 = likes % 100
 
-    val res = if (result == 1) "человеку" else "людям"
+    val res = when {
+        result2 == 11 -> "людям"
+        result == 1 -> "человеку"
+        else -> "людям"
+    }
 
     println("Понравилось $likes $res")
 }
+
